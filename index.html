@@ -133,16 +133,30 @@
   @media (prefers-color-scheme: dark){ .tl-badge{color:#fcd34d} }
 
   /* program */
+  .prep-notes{display:grid; gap:10px; margin-bottom:16px}
+  .prep-note{background:var(--sun-soft); border:1.5px solid #f5d67a; border-radius:var(--radius); padding:14px 16px; font-size:14px; line-height:1.65}
+  .prep-note.blue{background:var(--teal-bg); border-color:var(--line)}
+  .prep-note strong{font-weight:800}
+  .prep-note .prep-k{font-family:"Fredoka",sans-serif; font-size:11px; letter-spacing:.12em; font-weight:700; color:var(--sky-deep); display:block; margin-bottom:2px}
+  @media (prefers-color-scheme: dark){ .prep-note{border-color:#5c4a12} }
   .prog{list-style:none; margin:0; padding:0; display:grid; gap:10px}
-  .prog li{display:flex; gap:14px; background:var(--paper); border:1.5px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--card-shadow); align-items:flex-start}
+  .prog li{display:flex; gap:14px; background:var(--paper); border:1.5px solid var(--line); border-radius:var(--radius); padding:15px 16px; box-shadow:var(--card-shadow); align-items:flex-start}
+  .prog li.surprise{border-color:#ffc9c4; background:linear-gradient(180deg,var(--paper),var(--pink-bg))}
+  .prog li.highlight{border-color:#f5d67a}
   .prog-num{flex:none; width:44px; height:44px; border-radius:50%; display:grid; place-items:center; font-family:"Fredoka",sans-serif; font-weight:700; font-size:17px; color:#fff; background:var(--sky)}
-  .prog li:nth-child(2) .prog-num{background:var(--coral)}
-  .prog li:nth-child(3) .prog-num{background:#e8930c}
-  .prog li:nth-child(4) .prog-num{background:#0d9488}
-  .prog li:nth-child(5) .prog-num{background:#db2777}
-  .prog h3{margin:0 0 2px; font-size:16.5px; font-weight:800}
+  .prog li:nth-child(3n+2) .prog-num{background:var(--coral)}
+  .prog li:nth-child(3n) .prog-num{background:#e8930c}
+  .prog li:nth-child(4n) .prog-num{background:#0d9488}
+  .prog li:nth-child(5n) .prog-num{background:#db2777}
+  .prog h3{margin:0 0 2px; font-size:16.5px; font-weight:800; line-height:1.45}
   .prog p{margin:0; font-size:13.5px; color:var(--ink-soft)}
-  .prog-time{font-family:"Fredoka",sans-serif; font-size:12px; font-weight:600; color:var(--sky-deep); letter-spacing:.06em}
+  .prog-time{font-family:"Fredoka",sans-serif; font-size:12.5px; font-weight:700; color:var(--sky-deep); letter-spacing:.06em}
+  .prog-phase{display:flex; align-items:center; gap:12px; margin:18px 2px 4px; font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:15px}
+  .prog-phase::before,.prog-phase::after{content:""; flex:1; height:2px; background:var(--line); border-radius:2px}
+  .prog-phase span{background:var(--ink); color:#fff; padding:5px 14px; border-radius:999px; font-size:13px; letter-spacing:.04em; white-space:nowrap}
+  @media (prefers-color-scheme: dark){ .prog-phase span{background:#e0f2fe; color:#082f49} }
+  .prog-people{display:flex; flex-wrap:wrap; gap:6px; margin-top:7px}
+  .prog-people span{background:var(--teal-bg); border-radius:999px; padding:3px 10px; font-size:12.5px; font-weight:700; color:var(--ink)}
 
   /* guests */
   .guest-group{background:var(--paper); border:1.5px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin-bottom:12px; box-shadow:var(--card-shadow)}
@@ -220,7 +234,7 @@
       </div>
       <div class="info-card">
         <div class="info-k">DATE &amp; TIME</div>
-        <div class="info-v">11/21（土）<br>16:00〜</div>
+        <div class="info-v">11/21（土）<br>16:00〜18:00<small>15:30から準備できます</small></div>
       </div>
       <div class="info-card">
         <div class="info-k">FEE</div>
@@ -228,7 +242,7 @@
       </div>
       <div class="info-card wide">
         <div class="info-k">DRESS CODE</div>
-        <div class="info-v">カジュアルでOK！<small>サンダル・ビーチウェア大歓迎。いつもの海の格好で気軽にどうぞ。</small></div>
+        <div class="info-v">カジュアルでOK！<small>サンダル・ビーチウェア大歓迎。いつもの海の格好で気軽にどうぞ。<br><strong style="color:var(--coral)">⚠️ テラスは寒くなります — 暖かい上着のご用意をお願いします！</strong></small></div>
       </div>
     </div>
   </div>
@@ -241,7 +255,7 @@
     </div>
     <div class="lead-card reveal">
       <p style="margin-top:0">舞台は、ふたりのホーム・<strong>鵠沼海岸</strong>のすぐそば。ビーチテニス、ランニング、旅先の大会——いろんな場所でふたりと笑ってきた仲間たちが、この日ひとつのテーブルに集まります。</p>
-      <p style="margin-bottom:0">ケーキとシャンパンを囲んで、たくさん話して、たくさん笑って。最後はスライドショーとみんなからのお祝いメッセージで、ちょっとだけ感動してもらう予定です。時間は足りないくらいになりそう——それくらい、ふたりの話は尽きません。</p>
+      <p style="margin-bottom:0">まずは<strong>サプライズ入場</strong>でワチャワチャ盛り上がって、そこからは<strong>本格・披露宴スタイル</strong>！ 再入場、主賓挨拶、乾杯、お食事と夕陽タイム、挙式＆ケーキカット、友人スピーチに動画とスライドショーまで。笑って、泣いて、時間は足りないくらいになりそうです。</p>
     </div>
   </section>
 
@@ -371,44 +385,125 @@
   <section>
     <div class="sec-head reveal">
       <span class="sec-tag">PROGRAM</span>
-      <h2>当日のプログラム</h2>
-      <p>16:00、イルキャンティ ビーチェでスタート！</p>
+      <h2>当日の式次第</h2>
+      <p>まずはサプライズ、そこから披露宴っぽく！ 16:00〜18:00、イルキャンティ ビーチェで。</p>
     </div>
+
+    <div class="prep-notes reveal">
+      <div class="prep-note">
+        <span class="prep-k">BEFORE ・ 15:30〜 準備</span>
+        <strong>15:30から会場で準備できます。</strong>早めに来られる方は、お手伝いをお願いします！ プロジェクターのセッティングもあります。
+      </div>
+      <div class="prep-note blue">
+        <span class="prep-k">PLEASE ・ お願い</span>
+        <strong>テラスは寒くなります。</strong>夕陽タイムは外に出るので、暖かい上着など防寒の準備をお願いします 🧥
+      </div>
+    </div>
+
+    <div class="prog-phase reveal"><span>🎉 PART 1 ・ サプライズ</span></div>
     <ol class="prog">
-      <li class="reveal">
+      <li class="surprise reveal">
         <div class="prog-num">1</div>
         <div>
-          <div class="prog-time">16:00〜</div>
-          <h3>パーティースタート＆乾杯 🥂</h3>
-          <p>シャンパンで乾杯！ まずはみんなで「おめでとう」を届けましょう。</p>
+          <div class="prog-time">16:00</div>
+          <h3>ふたり入場 — サプライズ！ 🎉</h3>
+          <p>何も知らないふたりが入場！ 盛大にサプライズして、みんなでワチャワチャお出迎えしましょう！</p>
         </div>
       </li>
       <li class="reveal">
         <div class="prog-num">2</div>
         <div>
-          <h3>フリートーク＆お食事</h3>
-          <p>基本は自由にワイワイと。ふたりとの思い出話、大会の裏話、なんでもアリの時間です。</p>
+          <div class="prog-time">16:05</div>
+          <h3>ふたり 一旦退場</h3>
+          <p>ここでふたりは一旦退場。気持ちを切り替えて、いよいよ披露宴仕様へ——。</p>
         </div>
       </li>
-      <li class="reveal">
+    </ol>
+
+    <div class="prog-phase reveal"><span>💒 PART 2 ・ 披露宴</span></div>
+    <ol class="prog">
+      <li class="highlight reveal">
         <div class="prog-num">3</div>
         <div>
-          <h3>ケーキ入刀 🎂</h3>
-          <p>用意中のウェディングケーキで、ふたりの共同作業。シャッターチャンスをお見逃しなく！</p>
+          <div class="prog-time">16:10</div>
+          <h3>新郎新婦 再入場 🎵</h3>
+          <p>曲をかけて、新郎新婦が改めて入場。ここからが本番の披露宴です！ 大きな拍手でお迎えください。</p>
         </div>
       </li>
       <li class="reveal">
         <div class="prog-num">4</div>
         <div>
-          <h3>夕陽タイム 🌅</h3>
-          <p>海のそばの会場ならでは。みんなで夕陽を眺める、ちょっと特別なひとときを。</p>
+          <div class="prog-time">16:15</div>
+          <h3>主賓挨拶</h3>
+          <p>国府田様より、ふたりへのお祝いのご挨拶をいただきます。</p>
+          <div class="prog-people"><span>🎤 国府田様</span></div>
         </div>
       </li>
       <li class="reveal">
         <div class="prog-num">5</div>
         <div>
-          <h3>スライドショー＆お祝いメッセージ 🎬</h3>
-          <p>フィナーレは、ゆうかちゃんが準備してくれた動画と、みんなからのお祝いメッセージ。笑って、泣いて、ふたりの門出を締めくくります。</p>
+          <div class="prog-time">16:18</div>
+          <h3>乾杯 🥂</h3>
+          <p>藤田様のご発声で、みんなで乾杯！ お祝いムード全開で披露宴スタートです。</p>
+          <div class="prog-people"><span>🥂 藤田様</span></div>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="prog-num">6</div>
+        <div>
+          <div class="prog-time">16:20 〜 17:00</div>
+          <h3>お食事・歓談 ＋ 夕陽タイム 🌅</h3>
+          <p>美味しいお食事を囲んで、ゆっくり歓談を。海のそばならではの夕陽タイムもお楽しみに。テラスは寒いので、上着をお忘れなく。</p>
+        </div>
+      </li>
+      <li class="highlight reveal">
+        <div class="prog-num">7</div>
+        <div>
+          <div class="prog-time">17:05</div>
+          <h3>挙式 ＋ ケーキカット 💒🎂</h3>
+          <p>みんなの前で改めて愛を誓う挙式と、ケーキカットの共同作業。牧師は藤田が務めます！ シャッターチャンスをお見逃しなく。</p>
+          <div class="prog-people"><span>⛪ 牧師：藤田</span></div>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="prog-num">8</div>
+        <div>
+          <div class="prog-time">17:20</div>
+          <h3>友人スピーチ 🎤</h3>
+          <p>ふたりと深いご縁の4名から、心のこもったスピーチをいただきます。</p>
+          <div class="prog-people"><span>ゆーき様</span><span>ゆうか様</span><span>まいこ様</span><span>みなみ様</span></div>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="prog-num">9</div>
+        <div>
+          <div class="prog-time">17:30</div>
+          <h3>お祝いメッセージ動画 🎬</h3>
+          <p>みんなから寄せられたお祝いメッセージ動画を、プロジェクターで上映します。</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="prog-num">10</div>
+        <div>
+          <div class="prog-time">17:40</div>
+          <h3>スライドショー 📽️</h3>
+          <p>ふたりの歩みを振り返るスライドショー。笑いあり、感動ありのひとときを。</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="prog-num">11</div>
+        <div>
+          <div class="prog-time">17:50</div>
+          <h3>新郎新婦から一言 💐</h3>
+          <p>康平さん＆ゆなさんから、集まってくれたみんなへ感謝の言葉を。</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="prog-num">12</div>
+        <div>
+          <div class="prog-time">18:00</div>
+          <h3>閉宴 👋</h3>
+          <p>名残惜しいけれど、ここでお開きに。ふたりの新しい門出に、最後まで大きな拍手を！</p>
         </div>
       </li>
     </ol>
@@ -458,6 +553,7 @@
       <h3>💐 Special Thanks</h3>
       <p>🌸 お花の手配 —— <strong>ユーキ</strong>、ありがとう！</p>
       <p>🎬 お祝い動画の準備 —— <strong>ゆうかちゃん</strong>、ありがとう！</p>
+      <p>⛪ 挙式の牧師 —— <strong>藤田</strong>が務めます！</p>
       <p>🧾 当日の受付・集金のお手伝い —— <strong>カワ・文也・ゆみちゃん</strong>、よろしくお願いします＆ありがとう！</p>
       <p>みんなの「おめでとう」が集まって、この日ができています。</p>
     </div>
@@ -493,7 +589,7 @@
 
 <footer>
   <div class="en">KOHEI &amp; YUNA WEDDING PARTY</div>
-  <p>2026.11.21 SAT 16:00〜 ／ iL CHIANTI BEACHE<br>Let's all have fun together!</p>
+  <p>2026.11.21 SAT 16:00〜18:00 ／ iL CHIANTI BEACHE<br>Let's all have fun together!</p>
 </footer>
 
 <script>
